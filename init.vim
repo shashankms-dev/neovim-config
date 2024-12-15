@@ -19,6 +19,12 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set fileencoding=utf-8          " set file encoding for current buffer, used when writing to file
 set encoding=utf-8              " encoding to use internally
 
+" Ask for confirmation when handling unsaved or read-only files
+set confirm
+
+" Disable creating swapfiles, see https://goo.gl/FA6m6h
+set noswapfile
+
 " Allow backspacing over autoindent, line breaks and start of Insert
 set backspace=indent,eol,start
 
@@ -42,7 +48,7 @@ set scrolloff=5                 " minimum number of lines to keep above and belo
 set sidescroll=1                " minimum number of columns to scroll horizontally
 set sidescrolloff=5             " minimum number of columns to keep to left and right when scrolling horizontally
 
-"
+" Use list mode and customized listchars
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
 " Turn off vi compatibility
@@ -50,6 +56,9 @@ set nocompatible
 
 " Show current line where the cursor is
 set cursorline
+
+" Set matching pairs of characters and highlight matching brackets
+set matchpairs+=<:>
 
 " Use CTRL-L to clear the highlighting of 'hlsearch' (off by default) and call
 " :diffupdate.
